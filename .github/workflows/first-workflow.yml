@@ -6,6 +6,10 @@ jobs:
     steps:
       - name: Print greeting
         run: echo 'sup'
+      - name: testing
+        run: |
+          echo aaaaa
+          echo bbbbb
       - name: Print bye
         run: echo 'adios'
       
