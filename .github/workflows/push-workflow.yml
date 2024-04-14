@@ -1,4 +1,4 @@
-name: Pro workflow lmao
+name: ReactJS workflow lmao
 on: push
 jobs:
   chay-phat:
