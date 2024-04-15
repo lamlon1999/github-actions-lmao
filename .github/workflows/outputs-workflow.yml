@@ -45,6 +45,8 @@ jobs:
     steps:
       - name: Deploy
         run: echo "Deploying..."
+      - name: Get JS file
+        run: echo "${{ needs.build.outputs.js-file }}"
       - name: Download and unzip artifact
         uses: actions/download-artifact@v4
         with:

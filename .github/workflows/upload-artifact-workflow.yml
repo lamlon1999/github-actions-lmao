@@ -1,8 +1,10 @@
 name: 'Run on branch: job-artifact-and-outputs/starting-project-01'
 on:
-  push:
-    branches:
-      - job-artifact-and-outputs/starting-project-01
+  # push:
+  #   branches:
+  #     - job-artifact-and-outputs/starting-project-01
+  issues:
+    types: opened
 jobs:
   test:
     runs-on: ubuntu-latest
