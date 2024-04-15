@@ -70,4 +70,4 @@ jobs:
       - name: Get code
         uses: actions/checkout@v4
       - name: Check runner dir
-        run: ls -l dist
+        run: ls -l
