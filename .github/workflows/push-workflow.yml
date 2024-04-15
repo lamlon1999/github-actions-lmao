@@ -15,6 +15,7 @@ jobs:
       - name: Run test
         run: npm test
   chay-riel-phat:
+    need: chay-test-phat
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
