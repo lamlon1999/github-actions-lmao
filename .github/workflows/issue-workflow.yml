@@ -1,7 +1,5 @@
 name: Issue Workflow
-on: 
-  issues:
-    type: opened
+on: issues
 jobs:
   issue-noti-job:
     runs-on: ubuntu-latest
@@ -9,4 +7,4 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Issue noti
-        run: echo ${{ github }}
+        run: echo "${{ github }}"
