@@ -1,5 +1,8 @@
 name: Lint Test Build Workflow 2
-on: workflow_dispatch
+on: 
+  push:
+    branches:
+      - 'basic/starting-project-04'
 jobs:
   build-job:
     runs-on: ubuntu-latest
