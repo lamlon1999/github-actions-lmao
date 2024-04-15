@@ -1,7 +1,7 @@
 name: ReactJS workflow lmao
 on: push
 jobs:
-  chay-phat:
+  chay-test-phat:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -14,3 +14,16 @@ jobs:
         run: npm ci
       - name: Run test
         run: npm test
+  chay-riel-phat:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install NodeJS
+        uses: actions/setup-node@v4
+        with:
+          node-version: latest
+      - name: NPM Install
+        run: npm ci
+      - name: Build cai
+        run: npm run build
