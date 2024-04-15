@@ -1,0 +1,56 @@
+name: 'Run on branch: job-artifact-and-outputs/starting-project-01'
+on:
+  push:
+    branches:
+      - job-artifact-and-outputs/starting-project-01
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v4
+      - name: Install dependencies
+        run: npm ci
+      - name: Lint code
+        run: npm run lint
+      - name: Test code
+        run: npm run test
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v4
+      - name: Install dependencies
+        run: npm ci
+      - name: Build website
+        run: npm run build
+      - name: Get JS filename
+        run: find dist/assets/*js -type f -execdir echo '{}' ';'
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist-files
+          path: |
+            dist
+            package.json
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy
+        run: echo "Deploying..."
+      - name: Download and unzip artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: dist-files
+      - name: Check ls
+        run: ls -l
+  check-files:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v4
+      - name: Check runner dir
+        run: ls -l
