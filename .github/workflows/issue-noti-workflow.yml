@@ -1,5 +1,7 @@
-name: Issue Workflow 2
-on: issues
+name: Issue Workflow
+on: 
+  pull_request:
+    types: [opened, reopened]
 jobs:
   issue-noti-job:
     runs-on: ubuntu-latest

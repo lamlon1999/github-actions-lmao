@@ -1,4 +1,4 @@
-name: Lint Test Build Workflow 2
+name: Lint Test Build Workflow
 on: 
   push:
     branches:
