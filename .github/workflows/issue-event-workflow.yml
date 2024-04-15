@@ -1,4 +1,4 @@
-name: Issue Workflow
+name: Issue Workflow 2
 on: issues
 jobs:
   issue-noti-job:

@@ -1,4 +1,4 @@
-name: Lint Test Build Workflow
+name: Lint Test Build Workflow 2
 on: workflow_dispatch
 jobs:
   build-job:
