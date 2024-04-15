@@ -1,4 +1,4 @@
-name: ReactJS workflow lmao
+name: Issue Workflow
 on: 
   issues:
     type: opened

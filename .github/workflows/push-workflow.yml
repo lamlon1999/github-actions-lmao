@@ -1,4 +1,4 @@
-name: ReactJS workflow lmao
+name: Lint Test Build Workflow
 on: push
 jobs:
   build-job:
