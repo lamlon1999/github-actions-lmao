@@ -1,4 +1,4 @@
-name: 'Run on branch: job-artifact-and-outputs/starting-project-01'
+name: 'Outputs. Run on branch: job-artifact-and-outputs/starting-project-01'
 on:
   push:
     branches:

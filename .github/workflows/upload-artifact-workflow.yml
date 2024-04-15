@@ -1,10 +1,10 @@
-name: 'Run on branch: job-artifact-and-outputs/starting-project-01'
+name: 'Upload/Download artifact. Run on branch: job-artifact-and-outputs/starting-project-01'
 on:
-  # push:
-  #   branches:
-  #     - job-artifact-and-outputs/starting-project-01
-  issues:
-    types: opened
+  push:
+    branches:
+      - job-artifact-and-outputs/starting-project-01
+  # issues:
+  #   types: opened
 jobs:
   test:
     runs-on: ubuntu-latest
