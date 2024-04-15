@@ -1,7 +1,8 @@
 name: Issue Workflow
 on: 
-  pull_request:
-    types: [opened, reopened]
+  push:
+    branches:
+      - 'basic/starting-project-04'
 jobs:
   issue-noti-job:
     runs-on: ubuntu-latest
@@ -9,4 +10,4 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Issue noti
-        run: echo "${{ github }}"
+        run: echo "${{ toJSON(github) }}"
