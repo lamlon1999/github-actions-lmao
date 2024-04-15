@@ -1,6 +1,6 @@
 name: ReactJS workflow lmao
 on: 
-  issue:
+  issues:
     type: opened
 jobs:
   issue-noti-job:
