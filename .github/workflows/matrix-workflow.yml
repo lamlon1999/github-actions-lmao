@@ -1,0 +1,22 @@
+name: Controlling Flow
+on:
+  push:
+    branches:
+      - controlling-flow/starting-project-01
+jobs:
+  build:
+    strategy:
+      matrix:
+        node-version: [14, 16, 20]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 
+        uses: actions/checkout@v4
+      - name: Install NodeJS
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build

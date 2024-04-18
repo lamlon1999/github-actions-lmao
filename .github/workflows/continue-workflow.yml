@@ -2,7 +2,7 @@ name: Continue On Error
 on:
   push:
     branches:
-      - controlling-flow/starting-project-01
+      - main
 jobs:
   lint:
     runs-on: ubuntu-latest
