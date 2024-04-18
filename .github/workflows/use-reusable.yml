@@ -1,4 +1,4 @@
-name: Using reusable
+name: Using reusable workflow
 on:
   push:
     branches:
