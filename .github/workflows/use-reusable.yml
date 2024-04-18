@@ -1,0 +1,8 @@
+name: Using reusable
+on:
+  push:
+    branches:
+      - controlling-flow/starting-project-01
+jobs:
+  deploy:
+    uses: ./reusable-workflow.yml

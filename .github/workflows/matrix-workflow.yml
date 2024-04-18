@@ -2,7 +2,7 @@ name: Matrix Workflow
 on:
   push:
     branches:
-      - controlling-flow/starting-project-01
+      - main
 jobs:
   build:
     strategy:
