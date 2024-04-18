@@ -5,4 +5,4 @@ on:
       - controlling-flow/starting-project-01
 jobs:
   deploy:
-    uses: ./reusable-workflow.yml
+    uses: ./.github/workflows/reusable-workflow.yml
