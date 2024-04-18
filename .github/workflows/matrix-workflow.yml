@@ -1,4 +1,4 @@
-name: Controlling Flow
+name: Matrix Workflow
 on:
   push:
     branches:
